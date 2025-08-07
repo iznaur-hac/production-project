@@ -1,16 +1,16 @@
 import './styles/index.scss';
-import { classNames } from "shared/lib/classNames/calssNames";
-import { useTheme } from "./providers/ThemeProvider";
-import { AppRouter } from "./providers/router";
+import { classNames } from 'shared/lib/classNames/calssNames';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense } from 'react';
+import { AppRouter } from './providers/router';
+import { useTheme } from './providers/ThemeProvider';
 
-export const App = () => {
-    const {theme} = useTheme();
+export function App() {
+    const { theme } = useTheme();
 
     return (
-        <Suspense fallback=''>
+        <Suspense fallback="">
             <div className={classNames('app', {}, [theme])}>
                 <Navbar />
                 <div className="content-page">
@@ -19,5 +19,5 @@ export const App = () => {
                 </div>
             </div>
         </Suspense>
-    )
+    );
 }
