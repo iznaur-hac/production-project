@@ -5,5 +5,7 @@
   "язык": "English",
   "open": "open",
   "close": "close",
-  "PageNotFound": "Page not found"
+  "PageNotFound": "Page not found",
+  "ErrorOccurred": "An unexpected error occurred",
+  "RefreshPage": "refresh page"
 }
