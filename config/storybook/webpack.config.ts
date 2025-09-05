@@ -1,25 +1,26 @@
 import webpack, { RuleSetRule } from 'webpack';
-import { BuildPaths } from '../build/types/config';
 import path from 'path';
+import { BuildPaths } from '../build/types/config';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 
-export default ({config}: {config: webpack.Configuration}) => {
+export default ({ config }: {config: webpack.Configuration}) => {
     const paths: BuildPaths = {
         build: '',
         html: '',
         entry: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
-    }
+    };
 
     if (config.module) {
         // @ts-ignore
+        // eslint-disable-next-line no-param-reassign
         config.module.rules = config.module?.rules?.map((rule: RuleSetRule) => {
-            if(/svg/.test(rule.test as string)) {
-                return {...rule, exclude: /\.svg$/i}
+            if (/svg/.test(rule.test as string)) {
+                return { ...rule, exclude: /\.svg$/i };
             }
-    
+
             return rule;
-        })
+        });
     }
 
     config.resolve?.modules?.push(paths.src);
@@ -28,6 +29,6 @@ export default ({config}: {config: webpack.Configuration}) => {
     config.module?.rules?.push({
         test: /\.svg$/,
         use: ['@svgr/webpack'],
-    })
+    });
     return config;
-}
+};

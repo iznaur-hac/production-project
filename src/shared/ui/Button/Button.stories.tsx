@@ -30,4 +30,3 @@ Outline.args = {
     children: 'Text',
     theme: ThemeButton.OUTLINE,
 };
-

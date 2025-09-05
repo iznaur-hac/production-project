@@ -19,5 +19,3 @@ const Template: StoryFn<typeof Loader> = (args: Record<string, any>) => <Loader 
 
 export const Base = Template.bind({});
 Base.args = {};
-
-

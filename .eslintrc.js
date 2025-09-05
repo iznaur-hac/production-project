@@ -4,7 +4,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
+    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -18,6 +18,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
     ],
+    ignorePatterns: ['*.stories.tsx'],
     rules: {
         'react/jsx-indent': [2, 4],
         'linebreak-style': ['error', 'unix'],

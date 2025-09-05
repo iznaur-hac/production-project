@@ -15,7 +15,8 @@ export default {
     },
 } as Meta<typeof AppLink>;
 
-const Template: StoryFn<typeof AppLink> = (args: Record<string, any>) => <AppLink {...args} to='/' />;
+// eslint-disable-next-line max-len
+const Template: StoryFn<typeof AppLink> = (args: Record<string, any>) => <AppLink {...args} to="/" />;
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -29,4 +30,3 @@ Secondary.args = {
     children: 'Text',
     theme: AppLinkTheme.SECONDARY,
 };
-

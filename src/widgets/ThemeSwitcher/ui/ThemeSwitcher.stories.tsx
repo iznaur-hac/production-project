@@ -11,6 +11,7 @@ export default {
     },
 } as Meta<typeof ThemeSwitcher>;
 
+// eslint-disable-next-line max-len
 const Template: StoryFn<typeof ThemeSwitcher> = (args: Record<string, any>) => <ThemeSwitcher {...args} />;
 
 export const Base = Template.bind({});

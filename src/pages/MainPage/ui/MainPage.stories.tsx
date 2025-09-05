@@ -9,12 +9,10 @@ export default {
     component: MainPage,
     argTypes: {
         backgroundColor: { control: 'color' },
-    }
+    },
 } as Meta<typeof MainPage>;
 
 const Template: StoryFn<typeof MainPage> = () => <MainPage />;
 
 export const Base = Template.bind({});
 Base.args = {};
-
-

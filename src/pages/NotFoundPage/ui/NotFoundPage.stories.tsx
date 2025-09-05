@@ -9,10 +9,10 @@ export default {
     component: NotFoundPage,
     argTypes: {
         backgroundColor: { control: 'color' },
-    }
+    },
 } as Meta<typeof NotFoundPage>;
 
-const Template: StoryFn<typeof NotFoundPage> = (args) => <NotFoundPage {...args}/>;
+const Template: StoryFn<typeof NotFoundPage> = (args) => <NotFoundPage {...args} />;
 
-export const Base = Template.bind({});
-Base.args = {};
+export const Base = Template.bind({ });
+Base.args = { };
