@@ -6,12 +6,12 @@ import { App } from './app/App';
 import 'shared/config/i18n/i18n';
 
 render(
-    <BrowserRouter>
-        <ErrorBoundary>
+    <ErrorBoundary>
+        <BrowserRouter>
             <ThemeProvider>
                 <App />
             </ThemeProvider>
-        </ErrorBoundary>
-    </BrowserRouter>,
+        </BrowserRouter>
+    </ErrorBoundary>,
     document.getElementById('root'),
 );

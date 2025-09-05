@@ -7,5 +7,7 @@
   "close": "close",
   "PageNotFound": "Page not found",
   "ErrorOccurred": "An unexpected error occurred",
-  "RefreshPage": "refresh page"
+  "RefreshPage": "refresh page",
+  "Main": "Main",
+  "AboutSite": "About Site"
 }

@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/calssNames';
 import cls from './NotFoundPage.module.scss';
 
-interface NotFoundPageProps {
+export interface NotFoundPageProps {
     className?: string;
 }
 
