@@ -13,6 +13,7 @@
     "test:unit": "npx jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook"
   },
@@ -58,6 +59,8 @@
     "jest": "^27.5.1",
     "loki": "^0.35.1",
     "mini-css-extract-plugin": "^2.5.3",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
@@ -65,7 +68,7 @@
     "style-loader": "^3.3.1",
     "stylelint": "^14.16.1",
     "stylelint-config-standard-scss": "^3.0.0",
-    "stylelint-scss": "^6.12.1",
+    "stylelint-scss": "^4.7.0",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5",
@@ -96,6 +99,12 @@
         "target": "chrome.docker",
         "preset": "iPhone 7"
       }
+    }
+  },
+  "overrides": {
+    "loki": {
+      "@storybook/react": "9.1.2",
+      "@storybook/react-webpack5": "9.1.2"
     }
   }
 }
