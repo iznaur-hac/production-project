@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx webpack serve --env port=3000",
+    "postinstall": "patch-package",
     "build:prod": "npx webpack --env mode=production",
     "build:dev": "npx webpack --env mode=development",
     "lint:ts": "npx eslint \"**/*.{ts,tsx}\"",
@@ -60,7 +61,6 @@
     "loki": "^0.35.1",
     "mini-css-extract-plugin": "^2.5.3",
     "patch-package": "^8.0.0",
-    "postinstall-postinstall": "^2.1.0",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",

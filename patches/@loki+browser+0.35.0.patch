@@ -1,0 +1,19 @@
+diff --git a/node_modules/@loki/browser/src/get-stories.js b/node_modules/@loki/browser/src/get-stories.js
+index 8d62d36..bd278b7 100644
+--- a/node_modules/@loki/browser/src/get-stories.js
++++ b/node_modules/@loki/browser/src/get-stories.js
+@@ -33,10 +33,12 @@ const getStories = async (window) => {
+ 
+   if (window.__STORYBOOK_PREVIEW__ && window.__STORYBOOK_PREVIEW__.extract) {
+     // New official API to extract stories from preview
+-    await window.__STORYBOOK_PREVIEW__.extract();
++    // await window.__STORYBOOK_PREVIEW__.extract();
+ 
+     // Deprecated, will be removed in V9
+-    const stories = window.__STORYBOOK_PREVIEW__.storyStore.raw();
++    // const stories = window.__STORYBOOK_PREVIEW__.storyStore.raw();
++    const extracted = await window.__STORYBOOK_PREVIEW__.extract();
++    const stories = Object.values(extracted);
+ 
+     return stories
+       .map((component) => ({
