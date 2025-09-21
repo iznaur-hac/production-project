@@ -2,12 +2,14 @@
   "тестовый пример": "Test example",
   "перевод": "translate",
   "MainPage": "Main page",
-  "язык": "English",
+  "longLanguageName": "English",
+  "shortLanguageName": "En",
   "open": "open",
   "close": "close",
   "PageNotFound": "Page not found",
   "ErrorOccurred": "An unexpected error occurred",
   "RefreshPage": "refresh page",
   "Main": "Main",
-  "AboutSite": "About Site"
+  "AboutSite": "About Site",
+  "throw error": "throw error"
 }

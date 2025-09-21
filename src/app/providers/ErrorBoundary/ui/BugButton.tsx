@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button/Button';
 
 export const BugButton = () => {
     const [error, setError] = useState(false);
+    const { t } = useTranslation();
 
     const throwClick = () => {
         setError((prev) => !prev);
@@ -10,14 +12,13 @@ export const BugButton = () => {
 
     useEffect(() => {
         if (error) {
-            throw new Error();
+            throw new Error('Testing Error');
         }
     }, [error]);
 
     return (
-        // eslint-disable-next-line i18next/no-literal-string
         <Button onClick={throwClick}>
-            throw error
+            { t('throw error') }
         </Button>
     );
 };
