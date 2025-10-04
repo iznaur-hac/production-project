@@ -17,6 +17,7 @@ module.exports = {
         'react',
         '@typescript-eslint',
         'i18next',
+        'react-hooks',
     ],
     ignorePatterns: ['*.stories.tsx'],
     rules: {
@@ -41,6 +42,8 @@ module.exports = {
             ignoreAttribute: ['data-testid', 'to'],
         }],
         'max-len': ['error', { code: 100, ignoreComments: true }],
+        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
     },
     globals: {
         __IS_DEV__: true,

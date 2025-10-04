@@ -1,6 +1,7 @@
 import { StyleDecorator } from 'shared/config/storybook/decorators/StyleDecorator/StyleDecorator'; 
 import { RouterDecorator } from 'shared/config/storybook/decorators/RouterDecorator/RouterDecorator';
 import 'loki/configure-react';
+import { RootDecorator } from 'shared/config/storybook/decorators/RootDecorator/RootDecorator';
 
 /** @type { import('@storybook/react-webpack5').Preview } */
 const preview = {
@@ -33,6 +34,7 @@ const preview = {
   decorators: [
     StyleDecorator,
     RouterDecorator,
+    RootDecorator,
   ],
 };
 
